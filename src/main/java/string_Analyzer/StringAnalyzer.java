@@ -11,18 +11,19 @@ public class StringAnalyzer {
 		StringBuilder stringBuilder = new StringBuilder("String ");
 		int howHowManyLowerCase = 0;
 		int howHowManyUpperCase = 0;
-		for (int i = 0; i < var.length() ; i++) {
-			if (Character.isLowerCase(var.charAt(i))){
+		for (int i = 0; i < var.length(); i++) {
+			if (Character.isLowerCase(var.charAt(i))) {
 				howHowManyLowerCase++;
-			}if (Character.isUpperCase(var.charAt(i))){
+			}
+			if (Character.isUpperCase(var.charAt(i))) {
 				howHowManyUpperCase++;
 			}
 		}
 
-		if (howHowManyLowerCase>0){
+		if (howHowManyLowerCase > 0) {
 			stringBuilder.append("contains ").append(howHowManyLowerCase).append(" Lowercase letters");
 		}
-		if (howHowManyUpperCase>0){
+		if (howHowManyUpperCase > 0) {
 			stringBuilder.append("contains ").append(howHowManyUpperCase).append(" Uppercase letters");
 		}
 
