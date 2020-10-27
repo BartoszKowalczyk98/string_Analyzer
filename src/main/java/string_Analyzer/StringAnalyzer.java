@@ -12,15 +12,16 @@ public class StringAnalyzer {
 		int howManyLowerCase = 0;
 		int howManyUpperCase = 0;
 		int howManyNumbers = 0;
+		int howManySpecialSigns = 0;
 		for (int i = 0; i < var.length(); i++) {
 			if (Character.isLowerCase(var.charAt(i))) {
 				howManyLowerCase++;
-			}
-			else if (Character.isUpperCase(var.charAt(i))) {
+			} else if (Character.isUpperCase(var.charAt(i))) {
 				howManyUpperCase++;
-			}
-			else if (Character.isDigit(var.charAt(i))){
+			} else if (Character.isDigit(var.charAt(i))) {
 				howManyNumbers++;
+			} else {
+				howManySpecialSigns++;
 			}
 		}
 
@@ -30,8 +31,11 @@ public class StringAnalyzer {
 		if (howManyUpperCase > 0) {
 			stringBuilder.append("contains ").append(howManyUpperCase).append(" Uppercase letters ");
 		}
-		if (howManyUpperCase > 0) {
+		if (howManyNumbers > 0) {
 			stringBuilder.append("contains ").append(howManyNumbers).append(" numbers ");
+		}
+		if (howManySpecialSigns > 0) {
+			stringBuilder.append("contains ").append(howManySpecialSigns).append(" special signs ");
 		}
 
 		return stringBuilder.toString();
