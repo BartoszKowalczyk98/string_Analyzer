@@ -2,9 +2,12 @@
 Main application is src/main/java/string_Analyzer/StringAnalyzerApplication use it to run rest application and later
  input proper line in browser.
  Example of line to input in browser: 
+ 
  http://localhost:8080/analyze/testTEST{:<123
+ 
  And it should show:  
  "String contains 4 Lowercase letters contains 4 Uppercase letters contains 3 numbers contains 3 special signs"
+ 
  If you input "%", "?" or "#" api will not count them as special signs but will most probably not work properly. 
 
 ### Reference Documentation
