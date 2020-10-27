@@ -1,6 +1,8 @@
 # Read Me First
 Main application is src/main/java/string_Analyzer/StringAnalyzerApplication use it to run rest application and later
  input proper line in browser.
+ StringAnalyzer.java is api used to analyze given string and count lowercase, uppercase letters, numbers and special
+  signs in it. Then present it to the user
  Example of line to input in browser: 
  
  http://localhost:8080/analyze/testTEST{:<123
