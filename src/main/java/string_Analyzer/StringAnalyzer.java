@@ -9,22 +9,22 @@ public class StringAnalyzer {
 	@RequestMapping(path = "/analyze/{var}")
 	public String analyzeInput(@PathVariable String var) {
 		StringBuilder stringBuilder = new StringBuilder("String ");
-		int howHowManyLowerCase = 0;
-		int howHowManyUpperCase = 0;
+		int howManyLowerCase = 0;
+		int howManyUpperCase = 0;
 		for (int i = 0; i < var.length(); i++) {
 			if (Character.isLowerCase(var.charAt(i))) {
-				howHowManyLowerCase++;
+				howManyLowerCase++;
 			}
-			if (Character.isUpperCase(var.charAt(i))) {
-				howHowManyUpperCase++;
+			else if (Character.isUpperCase(var.charAt(i))) {
+				howManyUpperCase++;
 			}
 		}
 
-		if (howHowManyLowerCase > 0) {
-			stringBuilder.append("contains ").append(howHowManyLowerCase).append(" Lowercase letters");
+		if (howManyLowerCase > 0) {
+			stringBuilder.append("contains ").append(howManyLowerCase).append(" Lowercase letters");
 		}
-		if (howHowManyUpperCase > 0) {
-			stringBuilder.append("contains ").append(howHowManyUpperCase).append(" Uppercase letters");
+		if (howManyUpperCase > 0) {
+			stringBuilder.append("contains ").append(howManyUpperCase).append(" Uppercase letters");
 		}
 
 		return stringBuilder.toString();
